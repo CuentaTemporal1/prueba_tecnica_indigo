@@ -1,0 +1,44 @@
+name: Docker Compose CI/Test
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build_and_test:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+      
+    - name: Set up Environment Variables
+
+      run: |
+        echo "DB_PASSWORD=${{ secrets.DB_PASSWORD }}" >> .env
+        echo "BLOB_CONNECTION_STRING=${{ secrets.BLOB_CONNECTION_STRING }}" >> .env
+        # Agrega cualquier otra variable necesaria para el startup (JWT keys, etc.)
+        echo "JWT_KEY=${{ secrets.JWT_KEY }}" >> .env
+        echo "BLOB_ROOT_FOLDER=kbohorquez" >> .env
+
+    - name: Build and Start Services (API, DB, Frontend)
+
+      run: docker compose up -d --build --wait
+
+    - name: Run Integration Tests (Ejemplo)
+ 
+      run: |
+        echo "Esperando a que las migraciones se completen..."
+        sleep 60 
+        echo "Ejecutando tests contra la API..."
+        # Aquí iría el comando para ejecutar tests contra http://localhost:8080
+
+    - name: Tear Down Services
+      if: always()
+
+      run: docker compose down
