@@ -4,7 +4,28 @@ Este repositorio contiene la solución completa para un sistema de gestión de i
 
 El foco de esta solución está en demostrar la **separación de responsabilidades**, la **seguridad del manejo de sesión** (JWT vía Cookies HttpOnly), y el uso de patrones de diseño modernos.
 
+<img width="1909" height="921" alt="image" src="https://github.com/user-attachments/assets/ec6d6790-c2db-49c6-8a6f-5912d7ae436e" />
 ---
+<img width="1909" height="929" alt="image" src="https://github.com/user-attachments/assets/3eb3d356-9672-4660-89ab-e87371f7a61d" />
+
+
+---
+<img width="1909" height="932" alt="image" src="https://github.com/user-attachments/assets/fb6bf957-5238-486f-bc45-706f20b8c6d0" />
+
+
+---
+<img width="1915" height="939" alt="image" src="https://github.com/user-attachments/assets/b31bd7a4-e7ec-4146-b72d-222af6c30389" />
+
+
+
+---
+<img width="1904" height="935" alt="image" src="https://github.com/user-attachments/assets/3f4332c2-dd8a-4e6f-bc1f-2494e1611d51" />
+
+---
+
+<img width="967" height="361" alt="image" src="https://github.com/user-attachments/assets/86025189-612e-4574-82a1-05078c497449" />
+
+
 
 ## 🏛️ Descripción General de la Arquitectura
 
