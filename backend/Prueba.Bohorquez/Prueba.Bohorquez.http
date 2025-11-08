@@ -1,0 +1,6 @@
+@Prueba.Bohorquez_HostAddress = http://localhost:5108
+
+GET {{Prueba.Bohorquez_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
