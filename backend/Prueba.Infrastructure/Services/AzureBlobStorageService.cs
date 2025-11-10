@@ -72,7 +72,7 @@ namespace Prueba.Infrastructure.Services
                     BlobContainerName = _containerClient.Name,
                     BlobName = blobClient.Name,
                     Resource = "b",
-                    StartsOn = DateTimeOffset.UtcNow,
+                        StartsOn = DateTimeOffset.UtcNow.AddMinutes(-5),
                     ExpiresOn = DateTimeOffset.UtcNow.AddHours(1)
                 };
                 sasBuilder.SetPermissions(BlobSasPermissions.Read);
